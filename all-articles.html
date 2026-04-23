@@ -884,8 +884,8 @@
     }
   </style>
   <script type="module" crossorigin src="/assets/vendor-U3Y-9QKV.js"></script>
-  <script type="module" crossorigin src="/assets/main-cakj0WLu.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-CQNoBdM7.css">
+  <script type="module" crossorigin src="/assets/main-Dl9CCZNv.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-BlAGE_Ha.css">
 </head>
 
 <body class="font-inter text-dark bg-white overflow-x-hidden">
@@ -975,57 +975,59 @@
 
   <!-- 页面标题 -->
   <main id="main-content">
-  <section class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-light/50 to-white" role="banner" aria-label="所有文章">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-br from-light/80 via-white to-light/50 relative overflow-hidden" role="banner" aria-label="所有文章">
+    <!-- 背景装饰 -->
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/5 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s"></div>
+      <div class="absolute top-2/3 left-1/3 w-64 h-64 bg-accent/5 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s"></div>
+    </div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="max-w-3xl mx-auto text-center">
-        <span class="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6 animate-fade-in">
+        <span class="inline-block px-5 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6 transform hover:scale-105 transition-transform duration-300 animate-fade-in">
           <i class="fa fa-pencil-alt mr-2"></i>所有文章
         </span>
-        <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-dark mb-6 animate-fade-in-up">
+        <h1 class="text-[clamp(2.5rem,5vw,4.5rem)] font-bold leading-tight text-dark mb-6 animate-fade-in-up">
           技术见解与教程
         </h1>
-        <p class="text-[clamp(1rem,2vw,1.25rem)] text-dark-light mb-8 max-w-xl animate-slide-in-up">
-          探索我关于Web开发、编程技巧和行业见解的所有文章。
+        <p class="text-[clamp(1rem,2vw,1.35rem)] text-dark-light mb-8 max-w-xl animate-slide-in-up leading-relaxed">
+          探索我关于Web开发、编程技巧和行业见解的所有文章。每一篇文章都凝聚了我的技术经验和思考。
         </p>
-        <!-- 装饰元素 -->
-        <div class="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
-        <div class="absolute -z-10 -top-10 -right-10 w-32 h-32 bg-secondary/20 rounded-full blur-xl"></div>
-        <div class="absolute -z-10 -bottom-10 -left-10 w-32 h-32 bg-accent/20 rounded-full blur-xl"></div>
       </div>
     </div>
   </section>
 
   <!-- 文章筛选和搜索 -->
-  <section class="py-16 bg-white" role="region" aria-label="文章筛选">
+  <section class="py-20 bg-gradient-to-b from-white to-light/50" role="region" aria-label="文章筛选">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto">
-        <div class="text-center mb-12">
-          <span class="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+        <div class="text-center mb-16">
+          <span class="inline-block px-5 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6 transform hover:scale-105 transition-transform duration-300">
             <i class="fa fa-filter mr-2"></i>筛选与搜索
           </span>
-          <h2 class="text-2xl font-bold text-dark mb-4">找到你感兴趣的内容</h2>
-          <p class="text-dark-light">使用搜索框或分类标签来浏览文章</p>
+          <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-6">找到你感兴趣的内容</h2>
+          <p class="text-[clamp(0.875rem,1.25vw,1.125rem)] text-dark-light">使用搜索框或分类标签来浏览文章</p>
         </div>
         
         <!-- 搜索框 -->
-        <div class="mb-12">
+        <div class="mb-16">
           <div class="relative max-w-2xl mx-auto">
-            <input type="text" id="search-input" placeholder="搜索文章..." class="search-input w-full px-4 py-4 pl-12 border border-light-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 shadow-sm hover:shadow-md transition-all">
-            <i class="fa fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-dark-light text-lg"></i>
+            <input type="text" id="search-input" placeholder="搜索文章..." class="search-input w-full px-5 py-4.5 pl-14 border border-light-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-[1.02]">
+            <i class="fa fa-search absolute left-5 top-1/2 transform -translate-y-1/2 text-dark-light text-xl"></i>
           </div>
         </div>
         
         <!-- 分类筛选 -->
-        <div class="mb-12">
-          <h3 class="text-lg font-semibold text-dark mb-6 text-center">分类</h3>
-          <div class="flex flex-wrap justify-center gap-3" id="category-filters">
-            <button class="category-filter active px-5 py-2.5 rounded-full border border-light-dark hover:bg-primary/10 transition-custom hover-scale" data-category="all">全部</button>
-            <button class="category-filter px-5 py-2.5 rounded-full border border-light-dark hover:bg-primary/10 transition-custom hover-scale" data-category="javascript">JavaScript</button>
-            <button class="category-filter px-5 py-2.5 rounded-full border border-light-dark hover:bg-primary/10 transition-custom hover-scale" data-category="react">React</button>
-            <button class="category-filter px-5 py-2.5 rounded-full border border-light-dark hover:bg-primary/10 transition-custom hover-scale" data-category="vue">Vue.js</button>
-            <button class="category-filter px-5 py-2.5 rounded-full border border-light-dark hover:bg-primary/10 transition-custom hover-scale" data-category="nodejs">Node.js</button>
-            <button class="category-filter px-5 py-2.5 rounded-full border border-light-dark hover:bg-primary/10 transition-custom hover-scale" data-category="webdev">Web开发</button>
-            <button class="category-filter px-5 py-2.5 rounded-full border border-light-dark hover:bg-primary/10 transition-custom hover-scale" data-category="career">职业发展</button>
+        <div class="mb-16">
+          <h3 class="text-lg font-semibold text-dark mb-8 text-center">分类</h3>
+          <div class="flex flex-wrap justify-center gap-4" id="category-filters">
+            <button class="category-filter active px-6 py-3 rounded-full border border-light-dark hover:bg-primary/10 transition-all duration-300 hover-scale transform hover:scale-105" data-category="all">全部</button>
+            <button class="category-filter px-6 py-3 rounded-full border border-light-dark hover:bg-primary/10 transition-all duration-300 hover-scale transform hover:scale-105" data-category="javascript">JavaScript</button>
+            <button class="category-filter px-6 py-3 rounded-full border border-light-dark hover:bg-primary/10 transition-all duration-300 hover-scale transform hover:scale-105" data-category="react">React</button>
+            <button class="category-filter px-6 py-3 rounded-full border border-light-dark hover:bg-primary/10 transition-all duration-300 hover-scale transform hover:scale-105" data-category="vue">Vue.js</button>
+            <button class="category-filter px-6 py-3 rounded-full border border-light-dark hover:bg-primary/10 transition-all duration-300 hover-scale transform hover:scale-105" data-category="nodejs">Node.js</button>
+            <button class="category-filter px-6 py-3 rounded-full border border-light-dark hover:bg-primary/10 transition-all duration-300 hover-scale transform hover:scale-105" data-category="webdev">Web开发</button>
+            <button class="category-filter px-6 py-3 rounded-full border border-light-dark hover:bg-primary/10 transition-all duration-300 hover-scale transform hover:scale-105" data-category="career">职业发展</button>
           </div>
         </div>
       </div>
@@ -1033,23 +1035,23 @@
   </section>
 
   <!-- 文章列表 -->
-  <section class="py-16 bg-light/50" role="region" aria-label="文章列表">
+  <section class="py-20 bg-gradient-to-b from-light/50 to-white" role="region" aria-label="文章列表">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-4xl mx-auto">
-        <div class="text-center mb-12">
-          <span class="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="inline-block px-5 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6 transform hover:scale-105 transition-transform duration-300">
             <i class="fa fa-book mr-2"></i>文章列表
           </span>
-          <h2 class="text-2xl font-bold text-dark mb-4">最新技术文章</h2>
-          <p class="text-dark-light">浏览我的技术见解和教程</p>
+          <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-6">最新技术文章</h2>
+          <p class="text-[clamp(0.875rem,1.25vw,1.125rem)] text-dark-light">浏览我的技术见解和教程</p>
         </div>
         
-        <div id="articles-container" class="space-y-8">
+        <div id="articles-container" class="space-y-10">
           <!-- 文章卡片将通过JavaScript动态生成 -->
         </div>
         
         <!-- 分页 -->
-        <div class="mt-16 flex justify-center" id="pagination">
+        <div class="mt-20 flex justify-center" id="pagination">
           <!-- 分页按钮将通过JavaScript动态生成 -->
         </div>
       </div>
@@ -1307,25 +1309,31 @@
         } else {
           paginatedArticles.forEach((article, index) => {
             const articleCard = document.createElement('div');
-            articleCard.className = 'article-card bg-white rounded-xl shadow-lg overflow-hidden hover-scale animate-fade-in-up';
+            articleCard.className = 'article-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl group animate-fade-in-up';
             articleCard.style.animationDelay = `${index * 0.1}s`;
             articleCard.innerHTML = `
               <div class="md:flex">
-                <div class="md:w-1/3">
-                  <img src="${article.image}" alt="${article.title}" class="w-full h-48 md:h-full object-cover transition-transform duration-500 hover:scale-105">
+                <div class="md:w-1/3 overflow-hidden">
+                  <img src="${article.image}" alt="${article.title}" class="w-full h-48 md:h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
                 </div>
-                <div class="p-6 md:w-2/3">
+                <div class="p-8 md:w-2/3">
                   <div class="mb-4">
-                    <span class="article-tag bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all">${article.category.charAt(0).toUpperCase() + article.category.slice(1)}</span>
+                    <span class="article-tag bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all px-3 py-1 rounded-full transform hover:scale-105">${article.category === 'javascript' ? 'JavaScript' : article.category === 'react' ? 'React' : article.category === 'vue' ? 'Vue.js' : article.category === 'nodejs' ? 'Node.js' : article.category === 'webdev' ? 'Web开发' : '职业发展'}</span>
                   </div>
-                  <h3 class="text-xl font-semibold text-dark mb-3 hover:text-primary transition-colors cursor-pointer">${article.title}</h3>
-                  <p class="text-dark-light mb-6">${article.excerpt}</p>
-                  <div class="flex flex-wrap gap-4 article-meta mb-4">
-                    <span class="flex items-center"><i class="fa fa-calendar mr-2 text-primary"></i> ${article.date}</span>
-                    <span class="flex items-center"><i class="fa fa-clock-o mr-2 text-primary"></i> ${article.readTime}</span>
+                  <h3 class="text-2xl font-bold text-dark mb-4 group-hover:text-primary transition-colors duration-300 cursor-pointer">${article.title}</h3>
+                  <p class="text-dark-light mb-6 leading-relaxed">${article.excerpt}</p>
+                  <div class="flex flex-wrap gap-6 article-meta mb-6">
+                    <span class="flex items-center text-sm"><i class="fa fa-calendar mr-2 text-primary"></i> ${article.date}</span>
+                    <span class="flex items-center text-sm"><i class="fa fa-clock-o mr-2 text-primary"></i> ${article.readTime}</span>
                   </div>
-                  <div class="flex flex-wrap gap-2">
-                    ${article.tags.map(tag => `<span class="text-xs bg-light px-3 py-1.5 rounded-full hover:bg-primary/10 transition-all">${tag}</span>`).join('')}
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    ${article.tags.map(tag => `<span class="text-xs bg-light text-dark-light px-3 py-1.5 rounded-full hover:bg-primary/10 hover:text-primary transition-all transform hover:scale-105">${tag}</span>`).join('')}
+                  </div>
+                  <div class="mt-4">
+                    <a href="#" class="text-primary hover:underline flex items-center group-hover:translate-x-1 transition-transform duration-300 font-medium">
+                      阅读更多
+                      <i class="fa fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
                   </div>
                 </div>
               </div>

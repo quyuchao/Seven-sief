@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Seven的个人开发者博客 - 所有项目页面，展示我的技术项目和作品。">
+  <meta name="keywords" content="个人博客, 全栈开发者, JavaScript, React, Vue.js, Node.js, Web开发, 编程项目, 所有项目">
+  <meta name="author" content="Seven">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0A84FF">
+  
+  <meta property="og:title" content="所有项目 - Seven的開發者博客">
+  <meta property="og:description" content="探索Seven的所有技术项目，包括Web应用程序、开发者工具和个人作品。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://seven-dev.cn/all-projects.html">
+  <meta property="og:image" content="https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/e9b45a956f8a4466812edc1d3dd15ff8~tplv-a9rns2rl98-image.image?lk3s=8e244e95&rcl=20260414170014797FA8F72CF2A680EF1C&rrcfp=f06b921b&x-expires=1778749243&x-signature=D3awYE%2FdgQZXblWdUaJkZZ9BIWg%3D">
+  <meta property="og:locale" content="zh_CN">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="所有项目 - Seven的開發者博客">
+  <meta name="twitter:description" content="探索Seven的所有技术项目，包括Web应用程序、开发者工具和个人作品。">
+  <meta name="twitter:image" content="https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/e9b45a956f8a4466812edc1d3dd15ff8~tplv-a9rns2rl98-image.image?lk3s=8e244e95&rcl=20260414170014797FA8F72CF2A680EF1C&rrcfp=f06b921b&x-expires=1778749243&x-signature=D3awYE%2FdgQZXblWdUaJkZZ9BIWg%3D">
+  
+  <link rel="canonical" href="https://seven-dev.cn/all-projects.html">
+  
+  <title>所有项目 | Seven的開發者博客</title>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Seven",
+    "alternateName": "Seven",
+    "url": "https://seven-dev.cn",
+    "image": "https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/e9b45a956f8a4466812edc1d3dd15ff8~tplv-a9rns2rl98-image.image",
+    "sameAs": [
+      "https://github.com/seven",
+      "https://www.linkedin.com/in/seven"
+    ],
+    "jobTitle": "全栈开发者",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "独立开发者"
+    },
+    "description": "Seven是一名拥有2年经验的全栈开发者，专注于构建现代应用程序。擅长JavaScript、React和C++。",
+    "knowsAbout": ["JavaScript", "React", "Vue.js", "Node.js", "Web Development", "C++"],
+    "areaServed": "中国"
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Seven的开发者博客",
+    "alternateName": "开发者洞察",
+    "url": "https://seven-dev.cn",
+    "description": "探索Seven的技术世界，分享Web开发、编程技巧和开发者职业旅程的见解。",
+    "author": {
+      "@type": "Person",
+      "name": "Seven"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://seven-dev.cn/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  
+  <!-- Tailwind 配置 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0A84FF',
+            secondary: '#5E5CE6',
+            accent: '#FF2D55',
+            success: '#34D399',
+            warning: '#FBBF24',
+            info: '#60A5FA',
+            dark: '#1C1C1E',
+            'dark-light': '#636366',
+            light: '#F5F5F7',
+            'light-dark': '#D1D1D6'
+          },
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+            mono: ['Fira Code', 'monospace'],
+            display: ['Inter', 'sans-serif']
+          },
+          fontSize: {
+            'heading-1': 'clamp(2.5rem, 5vw, 4rem)',
+            'heading-2': 'clamp(2rem, 4vw, 3rem)',
+            'heading-3': 'clamp(1.5rem, 3vw, 2rem)',
+            'heading-4': 'clamp(1.25rem, 2.5vw, 1.5rem)',
+            'body': 'clamp(1rem, 1.5vw, 1.125rem)',
+            'small': 'clamp(0.875rem, 1.25vw, 1rem)'
+          },
+          fontWeight: {
+            'light': 300,
+            'regular': 400,
+            'medium': 500,
+            'semibold': 600,
+            'bold': 700,
+            'extrabold': 800
+          },
+          backgroundImage: {
+            'gradient-primary': 'linear-gradient(135deg, #0A84FF 0%, #5E5CE6 100%)',
+            'gradient-secondary': 'linear-gradient(135deg, #FF2D55 0%, #FF9F1C 100%)',
+            'gradient-success': 'linear-gradient(135deg, #34D399 0%, #10B981 100%)',
+            'gradient-accent': 'linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%)',
+            'gradient-dark': 'linear-gradient(135deg, #1C1C1E 0%, #2D2D2F 100%)'
+          },
+        },
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Font Awesome 图标库 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- 预加载字体 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- 汉堡菜单样式 -->
+  <style>
+    .burger {
+      position: relative;
+      width: 40px;
+      height: 30px;
+      background: transparent;
+      cursor: pointer;
+      display: block;
+    }
+
+    .burger input {
+      display: none;
+    }
+
+    .burger span {
+      display: block;
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      background: #1C1C1E;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+    }
+
+    .burger span:nth-of-type(1) {
+      top: 0px;
+      transform-origin: left center;
+    }
+
+    .burger span:nth-of-type(2) {
+      top: 50%;
+      transform: translateY(-50%);
+      transform-origin: left center;
+    }
+
+    .burger span:nth-of-type(3) {
+      top: 100%;
+      transform-origin: left center;
+      transform: translateY(-100%);
+    }
+
+    .burger input:checked ~ span:nth-of-type(1) {
+      transform: rotate(45deg);
+      top: 0px;
+      left: 5px;
+    }
+
+    .burger input:checked ~ span:nth-of-type(2) {
+      width: 0%;
+      opacity: 0;
+    }
+
+    .burger input:checked ~ span:nth-of-type(3) {
+      transform: rotate(-45deg);
+      top: 28px;
+      left: 5px;
+    }
+  </style>
+  
+  <!-- 主题切换按钮样式 -->
+  <style>
+    .theme-switch {
+      --toggle-size: 16px;
+      /* the size is adjusted using font-size, */
+      /* this is not transform scale, */
+      /* so you can choose any size */
+      --container-width: 5.625em;
+      --container-height: 2.5em;
+      --container-radius: 6.25em;
+      /* radius 0 - minecraft mode :) */
+      --container-light-bg: #3D7EAE;
+      --container-night-bg: #1D1F2C;
+      --circle-container-diameter: 3.375em;
+      --sun-moon-diameter: 2.125em;
+      --sun-bg: #ECCA2F;
+      --moon-bg: #C4C9D1;
+      --spot-color: #959DB1;
+      --circle-container-offset: calc((var(--circle-container-diameter) - var(--container-height)) / 2 * -1);
+      --stars-color: #fff;
+      --clouds-color: #F3FDFF;
+      --back-clouds-color: #AACADF;
+      --transition: .5s cubic-bezier(0, -0.02, 0.4, 1.25);
+      --circle-transition: .3s cubic-bezier(0, -0.02, 0.35, 1.17);
+    }
+
+    /* 响应式调整 */
+    @media (max-width: 640px) {
+      .theme-switch {
+        --toggle-size: 14px;
+      }
+    }
+
+    .theme-switch, .theme-switch *, .theme-switch *::before, .theme-switch *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-size: var(--toggle-size);
+    }
+
+    .theme-switch__container {
+      width: var(--container-width);
+      height: var(--container-height);
+      background-color: var(--container-light-bg);
+      border-radius: var(--container-radius);
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0em -0.062em 0.062em rgba(0, 0, 0, 0.25), 0em 0.062em 0.125em rgba(255, 255, 255, 0.94);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .theme-switch__container::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      box-shadow: 0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset, 0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset;
+      border-radius: var(--container-radius)
+    }
+
+    .theme-switch__checkbox {
+      display: none;
+    }
+
+    .theme-switch__circle-container {
+      width: var(--circle-container-diameter);
+      height: var(--circle-container-diameter);
+      background-color: rgba(255, 255, 255, 0.1);
+      position: absolute;
+      left: var(--circle-container-offset);
+      top: var(--circle-container-offset);
+      border-radius: var(--container-radius);
+      box-shadow: inset 0 0 0 3.375em rgba(255, 255, 255, 0.1), inset 0 0 0 3.375em rgba(255, 255, 255, 0.1), 0 0 0 0.625em rgba(255, 255, 255, 0.1), 0 0 0 1.25em rgba(255, 255, 255, 0.1);
+      display: flex;
+      transition: var(--circle-transition);
+      pointer-events: none;
+    }
+
+    .theme-switch__sun-moon-container {
+      pointer-events: auto;
+      position: relative;
+      z-index: 2;
+      width: var(--sun-moon-diameter);
+      height: var(--sun-moon-diameter);
+      margin: auto;
+      border-radius: var(--container-radius);
+      background-color: var(--sun-bg);
+      box-shadow: 0.062em 0.062em 0.062em 0em rgba(254, 255, 239, 0.61) inset, 0em -0.062em 0.062em 0em #a1872a inset;
+      filter: drop-shadow(0.062em 0.125em 0.125em rgba(0, 0, 0, 0.25)) drop-shadow(0em 0.062em 0.125em rgba(0, 0, 0, 0.25));
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .theme-switch__moon {
+      transform: translateX(100%);
+      width: 100%;
+      height: 100%;
+      background-color: var(--moon-bg);
+      border-radius: inherit;
+      box-shadow: 0.062em 0.062em 0.062em 0em rgba(254, 255, 239, 0.61) inset, 0em -0.062em 0.062em 0em #969696 inset;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .theme-switch__spot {
+      position: absolute;
+      top: 0.75em;
+      left: 0.312em;
+      width: 0.75em;
+      height: 0.75em;
+      border-radius: var(--container-radius);
+      background-color: var(--spot-color);
+      box-shadow: 0em 0.0312em 0.062em rgba(0, 0, 0, 0.25) inset;
+    }
+
+    .theme-switch__spot:nth-of-type(2) {
+      width: 0.375em;
+      height: 0.375em;
+      top: 0.937em;
+      left: 1.375em;
+    }
+
+    .theme-switch__spot:nth-last-of-type(3) {
+      width: 0.25em;
+      height: 0.25em;
+      top: 0.312em;
+      left: 0.812em;
+    }
+
+    .theme-switch__clouds {
+      width: 1.25em;
+      height: 1.25em;
+      background-color: var(--clouds-color);
+      border-radius: var(--container-radius);
+      position: absolute;
+      bottom: -0.625em;
+      left: 0.312em;
+      box-shadow: 0.937em 0.312em var(--clouds-color), -0.312em -0.312em var(--back-clouds-color), 1.437em 0.375em var(--clouds-color), 0.5em -0.125em var(--back-clouds-color), 2.187em 0 var(--clouds-color), 1.25em -0.062em var(--back-clouds-color), 2.937em 0.312em var(--clouds-color), 2em -0.312em var(--back-clouds-color), 3.625em -0.062em var(--clouds-color), 2.625em 0em var(--back-clouds-color), 4.5em -0.312em var(--clouds-color), 3.375em -0.437em var(--back-clouds-color), 4.625em -1.75em 0 0.437em var(--clouds-color), 4em -0.625em var(--back-clouds-color), 4.125em -2.125em 0 0.437em var(--back-clouds-color);
+      transition: 0.5s cubic-bezier(0, -0.02, 0.4, 1.25);
+    }
+
+    .theme-switch__stars-container {
+      position: absolute;
+      color: var(--stars-color);
+      top: -100%;
+      left: 0.312em;
+      width: 2.75em;
+      height: auto;
+      transition: var(--transition);
+    }
+
+    /* actions */
+
+    .theme-switch__checkbox:checked + .theme-switch__container {
+      background-color: var(--container-night-bg);
+    }
+
+    .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__circle-container {
+      left: calc(100% - var(--circle-container-offset) - var(--circle-container-diameter));
+    }
+
+    .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__circle-container:hover {
+      left: calc(100% - var(--circle-container-offset) - var(--circle-container-diameter) - 0.187em)
+    }
+
+    .theme-switch__circle-container:hover {
+      left: calc(var(--circle-container-offset) + 0.187em);
+    }
+
+    .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__moon {
+      transform: translate(0);
+    }
+
+    .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__clouds {
+      bottom: -4.062em;
+    }
+
+    .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__stars-container {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  </style>
+  
+  <!-- 小图标样式 -->
+  <style>
+    ul {
+      list-style: none;
+    }
+
+    li::after {
+      content: "";
+      display: block;
+      height: 0px;
+      transition: height 0.3s ease-in-out;
+      pointer-events: none;
+    }
+
+    li:hover::after {
+      height: 10px;
+    }
+
+    .example-2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .example-2 .icon-content {
+      margin: 0 10px;
+      position: relative;
+    }
+    .example-2 .icon-content .tooltip {
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 5px;
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+    .example-2 .icon-content:hover .tooltip {
+      opacity: 1;
+      visibility: visible;
+      bottom: -40px;
+    }
+    .example-2 .icon-content a {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      color: #4d4d4d;
+      background-color: #fff;
+      transition: all 0.3s ease-in-out;
+    }
+    .example-2 .icon-content a:hover {
+      box-shadow: 3px 2px 30px 0px rgb(0 0 0 / 12%);
+    }
+    .example-2 .icon-content a i {
+      position: relative;
+      z-index: 1;
+      font-size: 16px;
+    }
+    .example-2 .icon-content a:hover {
+      color: white;
+    }
+    .example-2 .icon-content a .filled {
+      position: absolute;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background-color: #000;
+      transition: all 0.3s ease-in-out;
+    }
+    .example-2 .icon-content a:hover .filled {
+      height: 100%;
+    }
+    .example-2 .icon-content a[data-social="github"] .filled,
+    .example-2 .icon-content a[data-social="github"] ~ .tooltip {
+      background-color: #333;
+    }
+    .example-2 .icon-content a[data-social="douyin"] .filled,
+    .example-2 .icon-content a[data-social="douyin"] ~ .tooltip {
+      background-color: #FF2D55;
+    }
+    .example-2 .icon-content a[data-social="linkedin"] .filled,
+    .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+      background-color: #0077B5;
+    }
+    .example-2 .icon-content a[data-social="twitter"] .filled,
+    .example-2 .icon-content a[data-social="twitter"] ~ .tooltip {
+      background-color: #1DA1F2;
+    }
+  </style>
+  
+  <!-- 深色主题样式 -->
+  <style>
+    /* 深色主题 */
+    .dark-theme {
+      --bg-color: #1e1e1e;
+      --text-color: #e0e0e0;
+      --primary-color: #60a5fa;
+      --secondary-color: #34d399;
+      --card-bg: #2d2d2d;
+      --border-color: #404040;
+      --hover-bg: #3a3a3a;
+      --input-bg: #3a3a3a;
+    }
+    
+    .dark-theme body {
+      background-color: var(--bg-color) !important;
+      color: var(--text-color) !important;
+    }
+    
+    .dark-theme .bg-white {
+      background-color: var(--card-bg) !important;
+    }
+    
+    .dark-theme .text-dark {
+      color: var(--text-color) !important;
+    }
+    
+    .dark-theme .text-dark-light {
+      color: #b0b0b0 !important;
+    }
+    
+    .dark-theme .border-light-dark {
+      border-color: var(--border-color) !important;
+    }
+    
+    .dark-theme .bg-light {
+      background-color: var(--hover-bg) !important;
+    }
+    
+    .dark-theme .light-dark {
+      color: #b0b0b0 !important;
+    }
+    
+    .dark-theme .nav-shadow {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
+    }
+    
+    .dark-theme .card-shadow {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+    }
+    
+    .dark-theme .bg-gradient-blue {
+      background: linear-gradient(135deg, #3b82f6, #60a5fa) !important;
+    }
+    
+    .dark-theme .bg-primary {
+      background-color: var(--primary-color) !important;
+    }
+    
+    .dark-theme .text-primary {
+      color: var(--primary-color) !important;
+    }
+    
+    .dark-theme .border {
+      border-color: var(--border-color) !important;
+    }
+    
+    .dark-theme input[type="text"],
+    .dark-theme input[type="email"],
+    .dark-theme textarea {
+      background-color: var(--input-bg) !important;
+      color: var(--text-color) !important;
+      border-color: var(--border-color) !important;
+    }
+    
+    .dark-theme input[type="text"]::-moz-placeholder, .dark-theme input[type="email"]::-moz-placeholder, .dark-theme textarea::-moz-placeholder {
+      color: #b0b0b0 !important;
+    }
+    
+    .dark-theme input[type="text"]::placeholder,
+    .dark-theme input[type="email"]::placeholder,
+    .dark-theme textarea::placeholder {
+      color: #b0b0b0 !important;
+    }
+    
+    /* 汉堡菜单深色主题 */
+    .dark-theme .burger span {
+      background: var(--text-color) !important;
+    }
+    
+    /* 链接和按钮的深色主题 */
+    .dark-theme a:hover {
+      color: var(--primary-color) !important;
+    }
+    
+    .dark-theme .hover-scale:hover {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3) !important;
+    }
+    
+    /* 技术栈卡片深色主题 */
+    .dark-theme .tech-stack-item {
+      background-color: var(--card-bg) !important;
+      border-color: var(--border-color) !important;
+    }
+    
+    /* 页脚深色主题 */
+    .dark-theme footer {
+      background-color: #1a1a1a !important;
+    }
+    
+    /* 所有项目页面顶部深色主题 */
+    .dark-theme section[role="banner"] {
+      background: linear-gradient(to bottom, rgba(30, 30, 30, 0.5), #1e1e1e) !important;
+    }
+    
+    .dark-theme section[role="banner"] h1 {
+      color: #f0f0f0 !important;
+    }
+    
+    .dark-theme section[role="banner"] p {
+      color: #b0b0b0 !important;
+    }
+    
+    .dark-theme section[role="banner"] span {
+      background-color: rgba(96, 165, 250, 0.1) !important;
+      color: var(--primary-color) !important;
+    }
+    
+    /* 项目筛选区域深色主题 */
+    .dark-theme section[role="region"]:first-of-type {
+      background-color: var(--card-bg) !important;
+    }
+    
+    .dark-theme section[role="region"]:first-of-type h3 {
+      color: var(--text-color) !important;
+    }
+    
+    /* 项目列表区域深色主题 */
+    .dark-theme section[role="region"]:last-of-type {
+      background-color: var(--bg-color) !important;
+    }
+    
+    /* 导航栏深色主题 */
+    .dark-theme #navbar {
+      backdrop-filter: blur(10px) !important;
+    }
+    
+    .dark-theme #navbar.bg-transparent {
+      background-color: transparent !important;
+    }
+    
+    .dark-theme #navbar.bg-white\/90 {
+      background-color: rgba(30, 30, 30, 0.95) !important;
+    }
+    
+    /* 导航链接深色主题 */
+    .dark-theme nav a {
+      color: #b0b0b0 !important;
+    }
+    
+    .dark-theme nav a:hover {
+      color: var(--primary-color) !important;
+    }
+    
+    /* 移动端导航菜单深色主题 */
+    .dark-theme #mobile-menu {
+      background-color: var(--card-bg) !important;
+      border-color: var(--border-color) !important;
+    }
+    
+    .dark-theme #mobile-menu a {
+      color: #b0b0b0 !important;
+    }
+    
+    .dark-theme #mobile-menu a:hover {
+      color: var(--primary-color) !important;
+    }
+  </style>
+  
+  <!-- 项目列表样式 -->
+  <style>
+    .project-card {
+      transition: all 0.3s ease;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .dark-theme .project-card {
+      background-color: var(--card-bg) !important;
+      border-color: var(--border-color) !important;
+    }
+    
+    .dark-theme .project-card:hover {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .project-tag {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      display: inline-block;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .dark-theme .project-tag {
+      background-color: rgba(96, 165, 250, 0.1) !important;
+      color: var(--primary-color) !important;
+    }
+    
+    .project-meta {
+      font-size: 0.875rem;
+      color: #636366;
+    }
+    
+    .dark-theme .project-meta {
+      color: #b0b0b0;
+    }
+    
+    .search-input {
+      transition: all 0.3s ease;
+    }
+    
+    .search-input:focus {
+      box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.2);
+    }
+    
+    .dark-theme .search-input {
+      background-color: var(--input-bg) !important;
+      color: var(--text-color) !important;
+      border-color: var(--border-color) !important;
+    }
+    
+    .dark-theme .search-input::-moz-placeholder {
+      color: #b0b0b0 !important;
+    }
+    
+    .dark-theme .search-input::placeholder {
+      color: #b0b0b0 !important;
+    }
+    
+    .dark-theme .search-input:focus {
+      box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+    }
+    
+    .tech-filter {
+      transition: all 0.3s ease;
+    }
+    
+    .tech-filter.active {
+      background-color: #0A84FF;
+      color: white;
+    }
+    
+    .dark-theme .tech-filter {
+      border-color: var(--border-color) !important;
+      color: var(--text-color) !important;
+    }
+    
+    .dark-theme .tech-filter:hover {
+      background-color: rgba(96, 165, 250, 0.1) !important;
+    }
+    
+    .dark-theme .tech-filter.active {
+      background-color: #60a5fa;
+      color: white !important;
+    }
+    
+    .pagination-btn {
+      transition: all 0.3s ease;
+    }
+    
+    .pagination-btn:hover:not(:disabled) {
+      background-color: #0A84FF;
+      color: white;
+    }
+    
+    .dark-theme .pagination-btn {
+      border-color: var(--border-color) !important;
+      color: var(--text-color) !important;
+    }
+    
+    .dark-theme .pagination-btn:hover:not(:disabled) {
+      background-color: #60a5fa;
+      color: white !important;
+    }
+    
+    .pagination-btn.active {
+      background-color: #0A84FF;
+      color: white;
+    }
+    
+    .dark-theme .pagination-btn.active {
+      background-color: #60a5fa;
+      color: white !important;
+    }
+    
+    .dark-theme .project-card h3 {
+      color: var(--text-color) !important;
+    }
+    
+    .dark-theme .project-card p {
+      color: #b0b0b0 !important;
+    }
+    
+    .dark-theme .project-card .text-xs {
+      background-color: var(--hover-bg) !important;
+      color: var(--text-color) !important;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/vendor-U3Y-9QKV.js"></script>
+  <script type="module" crossorigin src="/assets/main-DknHR6LH.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-CQNoBdM7.css">
+</head>
+
+<body class="font-inter text-dark bg-white overflow-x-hidden">
+  <!-- 跳过导航链接 -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg focus:shadow-lg">
+    跳到主要内容
+  </a>
+  
+  <div id="app"></div>
+  <!-- 导航栏 -->
+  <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent" role="navigation" aria-label="主导航">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- 主题切换按钮 -->
+        <div class="flex items-center">
+          <label class="theme-switch">
+            <input type="checkbox" class="theme-switch__checkbox">
+            <div class="theme-switch__container">
+              <div class="theme-switch__clouds"></div>
+              <div class="theme-switch__stars-container">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545Z" fill="currentColor"/>
+                </svg>
+              </div>
+              <div class="theme-switch__circle-container">
+                <div class="theme-switch__sun-moon-container">
+                  <div class="theme-switch__moon">
+                    <div class="theme-switch__spot"></div>
+                    <div class="theme-switch__spot"></div>
+                    <div class="theme-switch__spot"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </label>
+        </div>
+        
+        <!-- 桌面导航 -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="index.html" class="text-dark-light hover:text-primary transition-custom font-medium">首页</a>
+          <a href="index.html#blog" class="text-dark-light hover:text-primary transition-custom font-medium">博客</a>
+          <a href="index.html#projects" class="text-dark-light hover:text-primary transition-custom font-medium">项目</a>
+          <a href="index.html#about" class="text-dark-light hover:text-primary transition-custom font-medium">关于我</a>
+          <a href="index.html#contact" class="text-dark-light hover:text-primary transition-custom font-medium">联系我</a>
+        </nav>
+        
+        <!-- 时间显示 -->
+        <div class="hidden md:flex items-center space-x-3">
+          <div class="time-display text-dark-light font-medium">
+            <i class="fa fa-clock-o mr-2"></i>
+            <span id="current-time"></span>
+          </div>
+        </div>
+        
+        <!-- 移动端菜单按钮 -->
+        <div class="md:hidden flex items-center">
+          <div class="time-display text-dark-light font-medium mr-4 hidden sm:block">
+            <i class="fa fa-clock-o mr-1"></i>
+            <span id="mobile-nav-time" class="text-sm"></span>
+          </div>
+          <div class="burger" id="menu-toggle">
+            <input type="checkbox" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 移动端导航 -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-light-dark shadow-lg">
+      <div class="px-4 py-5 space-y-3">
+        <!-- 时间显示 -->
+        <div class="time-display text-dark-light font-medium text-center mb-6 py-3 border-b border-light-dark rounded-lg bg-light/50">
+          <i class="fa fa-clock-o mr-2"></i>
+          <span id="mobile-current-time"></span>
+        </div>
+        <a href="index.html" class="block text-dark-light hover:text-primary transition-custom font-medium py-3 px-4 rounded-lg hover:bg-light/50">首页</a>
+        <a href="index.html#blog" class="block text-dark-light hover:text-primary transition-custom font-medium py-3 px-4 rounded-lg hover:bg-light/50">博客</a>
+        <a href="index.html#projects" class="block text-dark-light hover:text-primary transition-custom font-medium py-3 px-4 rounded-lg hover:bg-light/50">项目</a>
+        <a href="index.html#about" class="block text-dark-light hover:text-primary transition-custom font-medium py-3 px-4 rounded-lg hover:bg-light/50">关于我</a>
+        <a href="index.html#contact" class="block text-dark-light hover:text-primary transition-custom font-medium py-3 px-4 rounded-lg hover:bg-light/50">联系我</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 页面标题 -->
+  <main id="main-content">
+  <section class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-light/50 to-white" role="banner" aria-label="所有项目">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <span class="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6 animate-fade-in">
+          <i class="fa fa-code mr-2"></i>所有项目
+        </span>
+        <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-dark mb-6 animate-fade-in-up">
+          技术项目与作品
+        </h1>
+        <p class="text-[clamp(1rem,2vw,1.25rem)] text-dark-light mb-8 max-w-xl animate-slide-in-up">
+          探索我构建的所有技术项目，从Web应用程序到开发者工具。
+        </p>
+        <!-- 装饰元素 -->
+        <div class="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
+        <div class="absolute -z-10 -top-10 -right-10 w-32 h-32 bg-secondary/20 rounded-full blur-xl"></div>
+        <div class="absolute -z-10 -bottom-10 -left-10 w-32 h-32 bg-accent/20 rounded-full blur-xl"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 项目筛选和搜索 -->
+  <section class="py-16 bg-white" role="region" aria-label="项目筛选">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <span class="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+            <i class="fa fa-filter mr-2"></i>筛选与搜索
+          </span>
+          <h2 class="text-2xl font-bold text-dark mb-4">找到你感兴趣的项目</h2>
+          <p class="text-dark-light">使用搜索框或技术标签来浏览项目</p>
+        </div>
+        
+        <!-- 搜索框 -->
+        <div class="mb-12">
+          <div class="relative max-w-2xl mx-auto">
+            <input type="text" id="search-input" placeholder="搜索项目..." class="search-input w-full px-4 py-4 pl-12 border border-light-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 shadow-sm hover:shadow-md transition-all">
+            <i class="fa fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-dark-light text-lg"></i>
+          </div>
+        </div>
+        
+        <!-- 技术栈筛选 -->
+        <div class="mb-12">
+          <h3 class="text-lg font-semibold text-dark mb-6 text-center">技术栈</h3>
+          <div class="flex flex-wrap justify-center gap-3" id="tech-filters">
+            <button class="tech-filter active px-5 py-2.5 rounded-full border border-light-dark hover:bg-primary/10 transition-custom hover-scale" data-tech="all">全部</button>
+            <button class="tech-filter px-5 py-2.5 rounded-full border border-light-dark hover:bg-primary/10 transition-custom hover-scale" data-tech="react">React</button>
+            <button class="tech-filter px-5 py-2.5 rounded-full border border-light-dark hover:bg-primary/10 transition-custom hover-scale" data-tech="vue">Vue.js</button>
+            <button class="tech-filter px-5 py-2.5 rounded-full border border-light-dark hover:bg-primary/10 transition-custom hover-scale" data-tech="nodejs">Node.js</button>
+            <button class="tech-filter px-5 py-2.5 rounded-full border border-light-dark hover:bg-primary/10 transition-custom hover-scale" data-tech="d3">D3.js</button>
+            <button class="tech-filter px-5 py-2.5 rounded-full border border-light-dark hover:bg-primary/10 transition-custom hover-scale" data-tech="wechat">微信小程序</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 项目列表 -->
+  <section class="py-16 bg-light/50" role="region" aria-label="项目列表">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <span class="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+            <i class="fa fa-project-diagram mr-2"></i>项目列表
+          </span>
+          <h2 class="text-2xl font-bold text-dark mb-4">我的技术作品</h2>
+          <p class="text-dark-light">浏览我构建的所有项目和应用程序</p>
+        </div>
+        
+        <div id="projects-container" class="space-y-8">
+          <!-- 项目卡片将通过JavaScript动态生成 -->
+        </div>
+        
+        <!-- 分页 -->
+        <div class="mt-16 flex justify-center" id="pagination">
+          <!-- 分页按钮将通过JavaScript动态生成 -->
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="bg-dark text-white pt-16 pb-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+        <div class="md:col-span-2">
+          <div class="flex items-center mb-6">
+            <div class="w-10 h-10 rounded-lg bg-gradient-blue flex items-center justify-center">
+              <i class="fa fa-code text-white text-xl"></i>
+            </div>
+            <span class="ml-2 text-xl font-bold text-white">开发者洞察</span>
+          </div>
+          <p class="text-white/60 mb-6 max-w-md">开发者洞察是一个个人博客，我在这里分享关于Web开发、编程技巧和我作为软件开发者的旅程的见解。</p>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-6">导航</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-white/60 hover:text-white transition-custom">首页</a></li>
+            <li><a href="index.html#blog" class="text-white/60 hover:text-white transition-custom">博客</a></li>
+            <li><a href="index.html#projects" class="text-white/60 hover:text-white transition-custom">项目</a></li>
+            <li><a href="index.html#about" class="text-white/60 hover:text-white transition-custom">关于我</a></li>
+            <li><a href="index.html#contact" class="text-white/60 hover:text-white transition-custom">联系我</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="flex items-center mb-4 md:mb-0">
+            <p class="text-white/60 text-sm mr-6">© 2026 开发者洞察。保留所有权利。</p>
+            <div class="flex items-center text-white/60 text-sm">
+              <i class="fa fa-eye mr-2"></i>
+              <span id="page-views">0</span> 次访问
+            </div>
+          </div>
+          <div class="flex space-x-6">
+            <a href="#" class="text-white/60 hover:text-white text-sm transition-custom">隐私政策</a>
+            <a href="#" class="text-white/60 hover:text-white text-sm transition-custom">服务条款</a>
+            <a href="#" class="text-white/60 hover:text-white text-sm transition-custom">Cookie政策</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 返回顶部按钮 -->
+  <button id="back-to-top" aria-label="返回顶部" class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg shadow-primary/30 flex items-center justify-center opacity-0 invisible transition-all duration-300 z-50 hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+    <i class="fa fa-chevron-up"></i>
+  </button>
+
+  <script>
+    // 时间显示功能
+    function updateTime() {
+      const now = new Date();
+      const options = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+      };
+      const timeString = now.toLocaleString('zh-CN', options);
+      
+      // 简化的时间格式（用于移动端导航栏）
+      const shortOptions = {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+      };
+      const shortTimeString = now.toLocaleString('zh-CN', shortOptions);
+      
+      // 更新桌面端时间
+      const timeElement = document.getElementById('current-time');
+      if (timeElement) {
+        timeElement.textContent = timeString;
+      }
+      
+      // 更新移动端时间
+      const mobileTimeElement = document.getElementById('mobile-current-time');
+      if (mobileTimeElement) {
+        mobileTimeElement.textContent = timeString;
+      }
+      
+      // 更新移动端导航栏时间
+      const mobileNavTimeElement = document.getElementById('mobile-nav-time');
+      if (mobileNavTimeElement) {
+        mobileNavTimeElement.textContent = shortTimeString;
+      }
+    }
+    
+    // 初始化时间并每秒更新
+    updateTime();
+    setInterval(updateTime, 1000);
+    
+    // 主题切换
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeSwitch = document.querySelector('.theme-switch__checkbox');
+      const html = document.documentElement;
+      
+      // 检查本地存储中的主题偏好
+      if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        html.classList.add('dark-theme');
+        themeSwitch.checked = true;
+      }
+      
+      // 主题切换事件
+      themeSwitch.addEventListener('change', function() {
+        if (this.checked) {
+          html.classList.add('dark-theme');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          html.classList.remove('dark-theme');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+      
+      // 移动端菜单
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      menuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+      
+      // 初始化项目功能
+      initProjects();
+    });
+    
+    // 项目数据
+    const projectsData = [
+      {
+        id: 1,
+        title: 'TaskFlow - 现代项目管理工具',
+        description: '一个全栈应用程序，供团队管理项目、任务和截止日期，具有实时更新和可自定义的仪表板。',
+        tech: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
+        techStack: 'React + Node.js',
+        image: 'https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/5a5281d7b08e46e48c01f23388f4141c~tplv-a9rns2rl98-image.image?lk3s=8e244e95&rcl=20260414170014797FA8F72CF2A680EF1C&rrcfp=f06b921b&x-expires=1778749268&x-signature=4KgNRSrbFDVsfkdSkhzsaDlhiNY%3D',
+        githubLink: '#',
+        demoLink: '#',
+        date: '2025年7月15日',
+        projectPeriod: '2025年3月 - 2025年7月',
+        category: 'react'
+      },
+      {
+        id: 2,
+        title: 'DocuAPI - 交互式API文档平台',
+        description: '一个开发者友好的平台，用于创建、共享和测试API文档，具有交互式端点和代码示例。',
+        tech: ['Vue.js', 'Express', 'Swagger', 'Docker'],
+        techStack: 'Vue.js + Express',
+        image: 'https://p6-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/df9a0a675468444cb7f266ea8d8756c0~tplv-a9rns2rl98-image.image?lk3s=8e244e95&rcl=20260414170014797FA8F72CF2A680EF1C&rrcfp=f06b921b&x-expires=1778749285&x-signature=uDOkwdDLnC19lbbelWuaB4G81%2BI%3D',
+        githubLink: '#',
+        demoLink: '#',
+        date: '2025年6月20日',
+        projectPeriod: '2025年1月 - 2025年6月',
+        category: 'vue'
+      },
+      {
+        id: 3,
+        title: 'CodePen - 代码协作平台',
+        description: '一个在线代码编辑器和社区，允许开发者分享和协作编写前端代码。',
+        tech: ['React', 'TypeScript', 'Firebase', 'WebSockets'],
+        techStack: 'React + TypeScript',
+        image: 'https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/e9b45a956f8a4466812edc1d3dd15ff8~tplv-a9rns2rl98-image.image?lk3s=8e244e95&rcl=20260414170014797FA8F72CF2A680EF1C&rrcfp=f06b921b&x-expires=1778749243&x-signature=D3awYE%2FdgQZXblWdUaJkZZ9BIWg%3D',
+        githubLink: '#',
+        demoLink: '#',
+        date: '2025年5月10日',
+        projectPeriod: '2024年10月 - 2025年5月',
+        category: 'react'
+      },
+      {
+        id: 4,
+        title: 'DataViz - 数据可视化工具',
+        description: '一个强大的数据可视化平台，支持多种图表类型和实时数据更新。',
+        tech: ['D3.js', 'Express', 'PostgreSQL', 'Redis'],
+        techStack: 'D3.js + Express',
+        image: 'https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/5a5281d7b08e46e48c01f23388f4141c~tplv-a9rns2rl98-image.image?lk3s=8e244e95&rcl=20260414170014797FA8F72CF2A680EF1C&rrcfp=f06b921b&x-expires=1778749268&x-signature=4KgNRSrbFDVsfkdSkhzsaDlhiNY%3D',
+        githubLink: '#',
+        demoLink: '#',
+        date: '2025年4月5日',
+        projectPeriod: '2024年8月 - 2025年4月',
+        category: 'd3'
+      },
+      {
+        id: 5,
+        title: '心弦-七步测试',
+        description: '一款轻量级微信小程序，以"读懂自我、明晰情感"为核心，主打个人打分与16种恋爱人格测试两大核心功能。',
+        tech: ['微信小程序', 'JavaScript', '云开发', '数据可视化'],
+        techStack: '微信小程序',
+        image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=A%20cute%20illustration%20of%20a%20person%20wearing%20headphones%20with%20a%20thoughtful%20expression%2C%20pastel%20colors%2C%20minimalist%20style%2C%20suitable%20for%20a%20WeChat%20mini%20program%20about%20personality%20testing&image_size=square_hd',
+        githubLink: '#',
+        demoLink: '#',
+        date: '2025年8月1日',
+        projectPeriod: '2025年6月 - 2025年8月',
+        category: 'wechat'
+      },
+      {
+        id: 6,
+        title: 'Node.js API 网关',
+        description: '一个高性能的API网关，支持路由、认证、限流和监控等功能。',
+        tech: ['Node.js', 'Express', 'Redis', 'MongoDB'],
+        techStack: 'Node.js',
+        image: 'https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/e9b45a956f8a4466812edc1d3dd15ff8~tplv-a9rns2rl98-image.image?lk3s=8e244e95&rcl=20260414170014797FA8F72CF2A680EF1C&rrcfp=f06b921b&x-expires=1778749243&x-signature=D3awYE%2FdgQZXblWdUaJkZZ9BIWg%3D',
+        githubLink: '#',
+        demoLink: '#',
+        date: '2025年3月20日',
+        projectPeriod: '2025年1月 - 2025年3月',
+        category: 'nodejs'
+      }
+    ];
+    
+    // 项目功能
+    function initProjects() {
+      let currentPage = 1;
+      const itemsPerPage = 6;
+      let currentTech = 'all';
+      let searchTerm = '';
+      
+      // 渲染项目列表
+      function renderProjects() {
+        const filteredProjects = projectsData.filter(project => {
+          const matchesTech = currentTech === 'all' || project.category === currentTech;
+          const matchesSearch = searchTerm === '' || 
+            project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            project.description.toLowerCase().includes(searchTerm.toLowerCase());
+          return matchesTech && matchesSearch;
+        });
+        
+        const totalPages = Math.ceil(filteredProjects.length / itemsPerPage);
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const paginatedProjects = filteredProjects.slice(startIndex, endIndex);
+        
+        const container = document.getElementById('projects-container');
+        container.innerHTML = '';
+        
+        if (paginatedProjects.length === 0) {
+          container.innerHTML = `
+            <div class="text-center py-16">
+              <i class="fa fa-search text-4xl text-primary/50 mb-4"></i>
+              <h3 class="text-xl font-semibold text-dark mb-2">未找到项目</h3>
+              <p class="text-dark-light">尝试使用不同的搜索词或技术栈</p>
+            </div>
+          `;
+        } else {
+          paginatedProjects.forEach(project => {
+            const card = document.createElement('div');
+            card.className = 'project-card bg-white rounded-xl shadow-lg overflow-hidden hover-scale';
+            
+            card.innerHTML = `
+              <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/3">
+                  <img src="${project.image}" alt="${project.title}" class="w-full h-48 md:h-full object-cover">
+                </div>
+                <div class="md:w-2/3 p-6">
+                  <div class="flex items-center mb-3">
+                    <span class="bg-primary/10 text-primary text-xs font-medium px-2.5 py-0.5 rounded-full">${project.techStack}</span>
+                    <span class="project-meta ml-auto">${project.date}</span>
+                  </div>
+                  <h3 class="text-xl font-semibold mb-2">${project.title}</h3>
+                  <p class="text-dark-light mb-4">${project.description}</p>
+                  <div class="flex flex-wrap mb-4">
+                    ${project.tech.map(tech => `
+                      <span class="project-tag bg-light text-dark-light">${tech}</span>
+                    `).join('')}
+                  </div>
+                  <div class="flex space-x-3">
+                    <a href="${project.githubLink}" class="inline-flex items-center px-4 py-2 bg-dark text-white rounded-lg font-medium text-sm hover:opacity-90 transition-all">
+                      <i class="fa fa-github mr-2"></i>
+                      查看代码
+                    </a>
+                    ${project.demoLink && project.demoLink !== '#' ? `
+                      <a href="${project.demoLink}" class="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg font-medium text-sm hover:bg-primary/90 transition-all">
+                        <i class="fa fa-external-link-alt mr-2"></i>
+                        在线演示
+                      </a>
+                    ` : ''}
+                  </div>
+                </div>
+              </div>
+            `;
+            
+            container.appendChild(card);
+          });
+        }
+        
+        // 渲染分页
+        renderPagination(totalPages);
+      }
+      
+      // 渲染分页
+      function renderPagination(totalPages) {
+        const paginationContainer = document.getElementById('pagination');
+        paginationContainer.innerHTML = '';
+        
+        if (totalPages <= 1) return;
+        
+        // 上一页按钮
+        const prevButton = document.createElement('button');
+        prevButton.className = `pagination-btn px-4 py-2 rounded-lg border border-light-dark mr-2 ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''}`;
+        prevButton.disabled = currentPage === 1;
+        prevButton.textContent = '上一页';
+        prevButton.addEventListener('click', () => {
+          if (currentPage > 1) {
+            currentPage--;
+            renderProjects();
+          }
+        });
+        paginationContainer.appendChild(prevButton);
+        
+        // 页码按钮
+        const startPage = Math.max(1, currentPage - 2);
+        const endPage = Math.min(totalPages, startPage + 4);
+        
+        for (let i = startPage; i <= endPage; i++) {
+          const pageButton = document.createElement('button');
+          pageButton.className = `pagination-btn px-4 py-2 rounded-lg border border-light-dark mx-1 ${i === currentPage ? 'active' : ''}`;
+          pageButton.textContent = i;
+          pageButton.addEventListener('click', () => {
+            currentPage = i;
+            renderProjects();
+          });
+          paginationContainer.appendChild(pageButton);
+        }
+        
+        // 下一页按钮
+        const nextButton = document.createElement('button');
+        nextButton.className = `pagination-btn px-4 py-2 rounded-lg border border-light-dark ml-2 ${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : ''}`;
+        nextButton.disabled = currentPage === totalPages;
+        nextButton.textContent = '下一页';
+        nextButton.addEventListener('click', () => {
+          if (currentPage < totalPages) {
+            currentPage++;
+            renderProjects();
+          }
+        });
+        paginationContainer.appendChild(nextButton);
+      }
+      
+      // 搜索功能
+      const searchInput = document.getElementById('search-input');
+      searchInput.addEventListener('input', (e) => {
+        searchTerm = e.target.value;
+        currentPage = 1;
+        renderProjects();
+      });
+      
+      // 技术栈筛选
+      const techFilters = document.querySelectorAll('.tech-filter');
+      techFilters.forEach(filter => {
+        filter.addEventListener('click', () => {
+          techFilters.forEach(f => f.classList.remove('active'));
+          filter.classList.add('active');
+          currentTech = filter.dataset.tech;
+          currentPage = 1;
+          renderProjects();
+        });
+      });
+      
+      // 初始化渲染
+      renderProjects();
+    }
+  </script>
